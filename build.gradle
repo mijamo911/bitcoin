@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'mijamo'
+version '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+    compile 'com.google.guava:guava:31.0.1-jre'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
+}
+
+
